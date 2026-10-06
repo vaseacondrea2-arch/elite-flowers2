@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizare Comandă | Elite Flowers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="preloader">
+        <div class="flower-loader">
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="center-dot"></div>
+        </div>
+        <h2 class="loader-text">Elite Flowers</h2>
+    </div>
+
+    <div id="content-wrapper">
+        <header id="main-header">
+            <div class="logo">Elite Flowers</div>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Acasă</a></li>
+                    <li><a href="about.html" class="nav-link">Despre Noi</a></li>
+                    <li><a href="shop.html" class="nav-link">Magazin</a></li>
+                    <li><a href="cart.html" class="nav-link">Coș</a></li>
+                    <li><a href="#contact" class="nav-link cta-nav">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="checkout-section hidden">
+                <div class="cart-header-badge">
+                    <span class="badge-pulse"></span> Checkout Securizat (256-Bit SSL Encryption)
+                </div>
+                <h1 class="section-title">Finalizare Comandă</h1>
+
+                <div class="checkout-container">
+                    <!-- Formular Date Livrare & Plată -->
+                    <form id="checkout-form" class="checkout-form tech-glass">
+                        <div class="form-step">
+                            <h2 class="step-title"><span>1</span> Date de Contact & Livrare</h2>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="fullname">Nume și Prenume *</label>
+                                    <input type="text" id="fullname" placeholder="ex: Ion Popescu" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Număr Telefon *</label>
+                                    <input type="tel" id="phone" placeholder="ex: +373 60 000 000" required>
+                                </div>
+                                <div class="form-group full-width">
+                                    <label for="email">Adresă Email *</label>
+                                    <input type="email" id="email" placeholder="ex: client@gmail.com" required>
+                                </div>
+                                <div class="form-group full-width">
+                                    <label for="address">Adresă de Livrare (Chișinău / Suburbii) *</label>
+                                    <input type="text" id="address" placeholder="Strada, Număr, Bloc, Ap." required>
+                                </div>
+                                <div class="form-group full-width">
+                                    <label for="notes">Mențiuni / Card de felicitare (Opțional)</label>
+                                    <textarea id="notes" rows="3" placeholder="Scrie mesajul pe care dorești să îl atașăm buchetului..."></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-step">
+                            <h2 class="step-title"><span>2</span> Metodă de Plată</h2>
+                            <div class="payment-options">
+                                <label class="payment-card active">
+                                    <input type="radio" name="payment" value="card" checked>
+                                    <div class="payment-info">
+                                        <span class="pay-title">💳 Plată Online cu Cardul</span>
+                                        <span class="pay-desc">Securizat prin Visa / Mastercard</span>
+                                    </div>
+                                </label>
+                                <label class="payment-card">
+                                    <input type="radio" name="payment" value="cash">
+                                    <div class="payment-info">
+                                        <span class="pay-title">💵 Numerar la Livrare</span>
+                                        <span class="pay-desc">Achită curierului la primirea florilor</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="cta-btn place-order-btn">
+                            Plasează Comanda
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </button>
+                    </form>
+
+                    <!-- Sumar Produse din Coș -->
+                    <div class="checkout-summary tech-glass">
+                        <div class="summary-header">
+                            <h2>Produsele Tale</h2>
+                            <a href="cart.html" class="edit-cart-link">Editează</a>
+                        </div>
+
+                        <div id="checkout-items-list" class="checkout-items-list">
+                            <!-- Inserat dinamic prin JavaScript -->
+                        </div>
+
+                        <div class="summary-divider"></div>
+
+                        <div class="summary-details">
+                            <div class="summary-row">
+                                <span>Subtotal:</span>
+                                <span id="checkout-subtotal">0 MDL</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Livrare:</span>
+                                <span id="checkout-shipping">50 MDL</span>
+                            </div>
+                            <div class="summary-divider"></div>
+                            <div class="summary-row total-row">
+                                <span>Total de Plată:</span>
+                                <span id="checkout-grand-total">0 MDL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="main-footer" id="contact">
+            <div class="footer-content">
+                <div class="footer-section brand-info">
+                    <h2 class="footer-logo">Elite Flowers</h2>
+                    <p>Aducem frumusețea naturii mai aproape de tine prin aranjamente florale create cu pasiune și atenție la detalii.</p>
+                </div>
+                
+                <div class="footer-section links">
+                    <h3>Navigare Rapidă</h3>
+                    <ul>
+                        <li><a href="index.html">Acasă</a></li>
+                        <li><a href="about.html">Despre Noi</a></li>
+                        <li><a href="shop.html">Magazin</a></li>
+                        <li><a href="cart.html">Coș</a></li>
+                        <li><a href="#">Termeni și Condiții</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section contact-info">
+                    <h3>Contact</h3>
+                    <p><span>📞</span> +373 (76) 047 079</p>
+                    <p><span>✉️</span> elite.flowers.company@gmail.com</p>
+                    <p><span>📍</span> Strada Mitropolit Gavriil Bănulescu-Bodoni 59, MD-2005, Chișinău, Moldova</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Elite Flowers. Toate drepturile rezervate.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="cart.js"></script>
+    <script src="checkout.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

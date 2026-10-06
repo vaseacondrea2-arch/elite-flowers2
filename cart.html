@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coșul meu | Elite Flowers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="preloader">
+        <div class="flower-loader">
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="center-dot"></div>
+        </div>
+        <h2 class="loader-text">Elite Flowers</h2>
+    </div>
+
+    <div id="content-wrapper">
+        <header id="main-header">
+            <div class="logo">Elite Flowers</div>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Acasă</a></li>
+                    <li><a href="about.html" class="nav-link">Despre Noi</a></li>
+                    <li><a href="shop.html" class="nav-link">Magazin</a></li>
+                    <li><a href="cart.html" class="nav-link active">Coș</a></li>
+                    <li><a href="#contact" class="nav-link cta-nav">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="cart-section hidden">
+                <div class="cart-header-badge">
+                    <span class="badge-pulse"></span> Procesare Comandă securizată (256-bit SSL)
+                </div>
+                <h1 class="section-title">Coșul tău de cumpărături</h1>
+
+                <div class="cart-container">
+                    <!-- Lista de produse (Tech Card Layout) -->
+                    <div class="cart-items">
+                        <div class="cart-table-wrapper">
+                            <table class="cart-table">
+                                <thead>
+                                    <tr>
+                                        <th>Aranjament</th>
+                                        <th>Preț Unitar</th>
+                                        <th>Cantitate</th>
+                                        <th>Subtotal</th>
+                                        <th>Acțiune</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Randurile sunt generate dinamic din cart.js -->
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="cart-actions">
+                            <a href="shop.html" class="back-to-shop-btn">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                                Înapoi la Magazin
+                            </a>
+                            <button class="clear-cart-btn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                                Golește Coșul
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Panel Sumar Comandă -->
+                    <div class="cart-summary tech-glass">
+                        <div class="summary-header">
+                            <h2>Sumar Comandă</h2>
+                            <span class="tech-tag">LIVE</span>
+                        </div>
+                        
+                        <div class="summary-details">
+                            <div class="summary-row">
+                                <span>Valoare produse:</span>
+                                <span class="subtotal-val">0 MDL</span>
+                            </div>
+                            
+                            <div class="summary-row">
+                                <span>Livrare Express (Chișinău):</span>
+                                <span class="shipping-val">0 MDL</span>
+                            </div>
+
+                            <div class="promo-box">
+                                <div class="promo-input-group">
+                                    <input type="text" placeholder="Cod Promoțional (ex: ELITE10)" class="promo-input">
+                                    <button class="apply-promo">Aplică</button>
+                                </div>
+                            </div>
+
+                            <div class="summary-divider"></div>
+
+                            <div class="summary-row total-row">
+                                <span>Total de plată:</span>
+                                <span class="grand-total-val">0 MDL</span>
+                            </div>
+                        </div>
+
+                        <a href="checkout.html" class="checkout-link">
+                            <button class="cta-btn checkout-btn">
+                                Spre Finalizare
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </button>
+                        </a>
+
+                        <div class="tech-guarantees">
+                            <div class="guarantee-item">🔒 Plată Securizată</div>
+                            <div class="guarantee-item">⚡ Livrare în ~2 ore</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stare Coș Gol -->
+                <div class="empty-cart-message tech-glass" style="display: none;">
+                    <div class="empty-icon-glow"></div>
+                    <h2>Coșul tău este gol</h2>
+                    <p>Nu ai adăugat încă niciun aranjament floral în coșul tău de cumpărături.</p>
+                    <br>
+                    <br>
+                    <a href="shop.html"><button class="cta-btn">Explorează Magazinul</button></a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="main-footer" id="contact">
+            <div class="footer-content">
+                <div class="footer-section brand-info">
+                    <h2 class="footer-logo">Elite Flowers</h2>
+                    <p>Aducem frumusețea naturii mai aproape de tine prin aranjamente florale create cu pasiune și atenție la detalii.</p>
+                </div>
+                
+                <div class="footer-section links">
+                    <h3>Navigare Rapidă</h3>
+                    <ul>
+                        <li><a href="index.html">Acasă</a></li>
+                        <li><a href="about.html">Despre Noi</a></li>
+                        <li><a href="shop.html">Magazin</a></li>
+                        <li><a href="cart.html">Coș</a></li>
+                        <li><a href="#">Termeni și Condiții</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section contact-info">
+                    <h3>Contact</h3>
+                    <p><span>📞</span> +373 (76) 047 079</p>
+                    <p><span>✉️</span> elite.flowers.company@gmail.com</p>
+                    <p><span>📍</span> Strada Mitropolit Gavriil Bănulescu-Bodoni 59, MD-2005, Chișinău, Moldova</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Elite Flowers. Toate drepturile rezervate.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="cart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

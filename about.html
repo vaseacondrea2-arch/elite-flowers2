@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Despre Noi - Elite Flowers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Modal Mutat Direct în Body pentru Centrare Fixă pe Ecran -->
+    <div id="member-modal" class="modal-overlay" onclick="closeMemberModal()">
+        <div class="modal-card" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeMemberModal()">&times;</button>
+            <img id="modal-img" src="" alt="Membru Echipa">
+            <h3 id="modal-name">Nume Membru</h3>
+            <p id="modal-role" class="role">Funcție</p>
+            <span id="modal-dept" class="dept">Departament</span>
+        </div>
+    </div>
+
+    <div id="preloader">
+        <div class="flower-loader">
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="petal"></div>
+            <div class="center-dot"></div>
+        </div>
+        <h2 class="loader-text">Elite Flowers</h2>
+    </div>
+
+    <div id="content-wrapper">
+        <header id="main-header">
+            <div class="logo">Elite Flowers</div>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Acasă</a></li>
+                    <li><a href="about.html" class="nav-link active">Despre Noi</a></li>
+                    <li><a href="shop.html" class="nav-link">Magazin</a></li>
+                    <li><a href="cart.html" class="nav-link cta-nav">Coș</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="about-hero hidden">
+                <h1>Povestea Noastră</h1>
+                <p>Pasiune, eleganță și flori proaspete aduse direct la ușa ta în fiecare zi.</p>
+            </section>
+
+            <section class="about-content">
+                <div class="about-grid">
+                    <div class="about-text hidden">
+                        <h2>Cine Suntem</h2>
+                        <p>Elite Flowers s-a născut din dragoste pentru frumos și din dorința de a transforma fiecare moment obișnuit într-o amintire memorabilă. Echipa noastră de profesioniști selectează cu grijă fiecare fir de floare pentru a crea aranjamente unice, pline de rafinament.</p>
+                        <p>Ne concentrăm pe livrarea rapidă a prospețimii și pe calitatea impecabilă a serviciilor noastre, având o structură organizațională modernă și eficientă.</p>
+                    </div>
+                    <div class="about-img hidden">
+                        <img src="https://images.unsplash.com/photo-1563241527-3004b7be0ffd?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Despre Elite Flowers">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Galerie Lucrători -->
+            <section class="team-section hidden">
+                <div class="cart-header-badge">
+                    <span class="badge-pulse"></span> Echipa FE "Elite Flowers" S.R.L.
+                </div>
+                <h2 class="section-title">Echipa Noastră</h2>
+                <p class="section-subtitle">Oamenii dedicați din spatele fiecărui buchet și serviciu impecabil.</p>
+
+                <div class="team-gallery">
+                    <div class="team-card"><img src="images/1.png" alt="Condrea Vasile"><div class="team-info"><h3>Condrea Vasile</h3><p class="role">Manager IT</p><span class="dept">Departamentul IT</span></div></div>
+                    <div class="team-card"><img src="images/2.png" alt="Buga Vladimir"><div class="team-info"><h3>Buga Vladimir</h3><p class="role">Manager Adjunct IT</p><span class="dept">Departamentul IT</span></div></div>
+                    <div class="team-card"><img src="images/3.png" alt="Demidova Anastasia"><div class="team-info"><h3>Demidova Anastasia</h3><p class="role">Director Manager</p><span class="dept">Conducere Generală</span></div></div>
+                    <div class="team-card"><img src="images/4.png" alt="Coțaga Gabriela"><div class="team-info"><h3>Coțaga Gabriela</h3><p class="role">Director Adjunct</p><span class="dept">Conducere Generală</span></div></div>
+                    <div class="team-card"><img src="images/5.png" alt="Cereas Vasile"><div class="team-info"><h3>Cereas Vasile</h3><p class="role">Contabil Șef</p><span class="dept">Departamentul Contabilitate</span></div></div>
+                    <div class="team-card"><img src="images/6.png" alt="Brihuneț Alexei"><div class="team-info"><h3>Brihuneț Alexei</h3><p class="role">Contabil Adjunct</p><span class="dept">Departamentul Contabilitate</span></div></div>
+                    <div class="team-card"><img src="images/7.png" alt="Bratco Olga"><div class="team-info"><h3>Bratco Olga</h3><p class="role">Manager Vânzări</p><span class="dept">Departamentul Vânzări</span></div></div>
+                    <div class="team-card"><img src="images/8.png" alt="Botnari Natalia"><div class="team-info"><h3>Botnari Natalia</h3><p class="role">Manager Adjunct Vânzări</p><span class="dept">Departamentul Vânzări</span></div></div>
+                    <div class="team-card"><img src="images/9.png" alt="Ceaban Dumitru"><div class="team-info"><h3>Ceaban Dumitru</h3><p class="role">Manager Marketing</p><span class="dept">Departamentul Marketing</span></div></div>
+                    <div class="team-card"><img src="images/10.png" alt="Bulicanu Cristina"><div class="team-info"><h3>Bulicanu Cristina</h3><p class="role">Manager Adjunct Marketing</p><span class="dept">Departamentul Marketing</span></div></div>
+                    <div class="team-card"><img src="images/11.png" alt="Dercaci Ionela"><div class="team-info"><h3>Dercaci Ionela</h3><p class="role">Manager Design</p><span class="dept">Departamentul Design</span></div></div>
+                    <div class="team-card"><img src="images/12.png" alt="Antonii Iordana"><div class="team-info"><h3>Antonii Iordana</h3><p class="role">Manager Adjunct Design</p><span class="dept">Departamentul Design</span></div></div>
+                    <div class="team-card"><img src="images/13.png" alt="Bordan Mihaela"><div class="team-info"><h3>Bordan Mihaela</h3><p class="role">Manager Resurse Umane</p><span class="dept">Departamentul Resurse Umane</span></div></div>
+                    <div class="team-card"><img src="images/14.png" alt="Bețivu Daniela"><div class="team-info"><h3>Bețivu Daniela</h3><p class="role">Manager Adjunct Resurse Umane</p><span class="dept">Departamentul Resurse Umane</span></div></div>
+                    <div class="team-card"><img src="images/15.png" alt="Căldare Vladislav"><div class="team-info"><h3>Căldare Vladislav</h3><p class="role">Manager de Achiziții</p><span class="dept">Departamentul Achiziții</span></div></div>
+                    <div class="team-card"><img src="images/16.png" alt="Bostan Ariadna"><div class="team-info"><h3>Bostan Ariadna</h3><p class="role">Content Maker</p><span class="dept">Departamentul SMM</span></div></div>
+                </div>
+            </section>
+
+            <!-- Organigrama -->
+            <section class="organigram-section hidden">
+                <h2 class="section-title">Organigrama Întreprinderii</h2>
+                <p class="section-subtitle">Apasă pe imagine pentru a deschide organigrama în modul interactiv pe tot ecranul.</p>
+
+                <div class="organigram-wrapper tech-glass" onclick="openMemberModal('FE Elite Flowers S.R.L.', 'Organigramă Generală', 'Toate Departamentele', 'images/organigrama.png')">
+                    <img src="images/organigrama.png" alt="Organigrama FE Elite Flowers SRL">
+                    <div class="organigram-overlay-hint">
+                        <span>🔍 Apasă pentru vizualizare pe tot ecranul</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="main-footer" id="contact">
+            <div class="footer-content">
+                <div class="footer-section brand-info">
+                    <h2 class="footer-logo">Elite Flowers</h2>
+                    <p>Aducem frumusețea naturii mai aproape de tine prin aranjamente florale create cu pasiune și atenție la detalii.</p>
+                </div>
+                
+                <div class="footer-section links">
+                    <h3>Navigare Rapidă</h3>
+                    <ul>
+                        <li><a href="index.html">Acasă</a></li>
+                        <li><a href="about.html">Despre Noi</a></li>
+                        <li><a href="shop.html">Magazin</a></li>
+                        <li><a href="cart.html">Coș</a></li>
+                        <li><a href="#">Termeni și Condiții</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section contact-info">
+                    <h3>Contact</h3>
+                    <p><span>📞</span> +373 (76) 047 079</p>
+                    <p><span>✉️</span> contact@eliteflowers.md</p>
+                    <p><span>📍</span> Strada Mitropolit Gavriil Bănulescu-Bodoni 59, MD-2005, Chișinău, Moldova</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Elite Flowers. Toate drepturile rezervate.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function openMemberModal(name, role, dept, img) {
+            document.getElementById('modal-name').textContent = name;
+            document.getElementById('modal-role').textContent = role;
+            document.getElementById('modal-dept').textContent = dept;
+            document.getElementById('modal-img').src = img;
+            
+            const modal = document.getElementById('member-modal');
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // Blochează scroll-ul paginii când e deschis
+            setTimeout(() => {
+                modal.classList.add('active');
+            }, 10);
+        }
+
+        function closeMemberModal() {
+            const modal = document.getElementById('member-modal');
+            if (modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = ''; // Reactivează scroll-ul
+                setTimeout(() => {
+                    modal.style.display = 'none';
+                }, 300);
+            }
+        }
+    </script>
+</body>
+</html>
